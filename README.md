@@ -5,4 +5,3 @@ Special thanks to [MarzipanFly](https://github.com/MarzipanFly) for the help wit
 Go to [task 2](/Task_2.md), [task 3](/Task_3.md) and [task 4](/Task_4.md) to view the solution.  
 Note: The preliminary task was not included.
 
-@MarzipanFly
