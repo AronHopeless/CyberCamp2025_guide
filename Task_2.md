@@ -281,8 +281,33 @@ bmZ0X2tpdHR5X3VubG9jaw==
 
 Результат - `nft_kitty_unlock`
 
-У нас есть "ключ". Осталось найти, в какой "замок" его вставлять
+Теперь у нас есть "ключ". Осталось найти, в какой "замок" его вставлять
 
+Не имея иных зацепок, исследуем код сайта.
+В разделе body обнаружаем весьма интересный скрипт:
 
+![Архив_поиск](/imgs/Pasted%20image%2020250719152310.png)
+```
+<script>
+  window.getFinalReward = function(key) {
+    fetch("flag.php?key=" + encodeURIComponent(key))
+      .then(res => {
+        if (!res.ok) throw new Error("Ошибка сервера");
+        return res.text();
+      })
+      .then(flag => alert(flag))
+      .catch(err => alert("Ошибка: " + err.message));
+  };
+</script>
+```
+Этот скрипт может быть выполнен прямо из браузера и позволяет получить финальный флаг.  
+Чтобы им воспользоваться, необходимо открыть страницу `shop.nft-kitty.online`, перейти к инструментам разработчика (`F12`) на вкладку `Console` и выполнить  
+```
+getFinalReward('nft_kitty_unlock');
+```
 
+![Архив_поиск](/imgs/Pasted%20image%2020250719135944.png)
+![Архив_поиск](/imgs/Pasted%20image%2020250719135944.png)
+![Архив_поиск](/imgs/Pasted%20image%2020250719135944.png)
+![Архив_поиск](/imgs/Pasted%20image%2020250719135944.png)
 ![Архив_поиск](/imgs/Pasted%20image%2020250719135944.png)
