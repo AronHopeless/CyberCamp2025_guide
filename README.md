@@ -176,7 +176,7 @@ https://chainabuse.com/address/bc1qj5vz6sc7n90ylq393h9khsa8essryylj65fvdm
 
 ![Архив_поиск](/imgs/Pasted%20image%2020250719104301.png)
 
-Один из них, подтверждённый Ransomware, имеет метку DeadBolt Ransomware
+Один из них, подтверждённый Ransomware, имеет метку `DeadBolt Ransomware`  
 Убедимся, чем является DeadBolt:
 
 ![Архив_поиск](/imgs/Pasted%20image%2020250719125420.png)
