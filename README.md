@@ -1,4 +1,4 @@
-# CyberCamp2025_guide
+# CyberCamp MeetUp 2025 Киберразведка
 The way the CyberCamp tasks were solved by me  
 Special thanks to [@MarzipanFly](https://github.com/MarzipanFly) for the help with solving them
 <!-- @MarzipanFly -->
