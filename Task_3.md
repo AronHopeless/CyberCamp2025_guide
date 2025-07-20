@@ -52,7 +52,7 @@ item.flags_words = suspiciousWords.some(word => body.includes(word)) ? 1 : 0;
 return item;
 ```
 Код для вставки в json:
-```
+```js
 "functionCode": "const suspiciousWords = ['login', 'оплата', 'штраф', 'срочно', 'блокировка', 'avoid', 'penalty', 'verify', 'suspend'];\nconst body = item.body;\nitem.flags_words = suspiciousWords.some(word => body.includes(word)) ? 1 : 0;\nreturn item;"
 ```
 
