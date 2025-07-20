@@ -8,22 +8,8 @@
 ![Флаги](/imgs/Pasted%20image%2020250719093700.png)
 
 > [!WARNING]
->  
->  
->  
->  
-> *NO SPOILER ZONE*  
-> .  
-> .  
-> .  
-> .  
-> .  
-> Scroll to see solution  
-> .  
-> .  
-> .  
-> .  
-> .  
+> *SOLUTION ZONE*  
+> *BEWARE OF SPOILERS* 
 
 ### Решение
 #### Флаг 1
