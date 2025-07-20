@@ -1,0 +1,228 @@
+{
+  "name": "PhishCamp",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/cybercampovich/phishing-data/refs/heads/main/emails",
+        "options": {}
+      },
+      "id": "03d73cee-4843-446e-ab37-67da49615146",
+      "name": "HTTP Request - Загрузить JSON",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -660,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "const emails = items[0].json;\nreturn emails.map(email => ({ json: email }));\n"
+      },
+      "id": "6fab018b-cabd-409e-8c85-a147e993a372",
+      "name": "Function - Разбить Письма",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        100
+      ],
+      "notes": "Заменяет Function + Split Out Items"
+    },
+    {
+      "parameters": {
+        "functionCode": "//const suspiciousWords = ['login', 'оплата', 'штраф', 'срочно', 'блокировка', 'avoid', 'penalty', 'verify', 'suspend'];\n\n/*В этой ноде n8n вам необходимо реализовать функционал на js, который будет проверять, есть ли в Body письма какие-либо подозрительные слова. \nСписок подозрительных слов определен в suspiciousWords, используйте именно его, чтобы получить такой же ответ как и мы :)\n\nПолучите входное поле Body из объекта JSON, который передается в функцию (в данном случае это будет $json.body).\nПроверьте содержится ли хотя бы одно из подозрительных слов в Body письма.\nЕсли хотя бы одно подозрительное слово найдено, тогда сохраните 1 в свойство flags_words объекта item и верните его через return, чтобы это значение можно было использовать дальше в пайплайне.\n*/\n"
+      },
+      "id": "a77b74fa-2fff-44eb-ad95-767e925e8c5d",
+      "name": "Check Words",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "//const suspiciousUrls = ['bit.ly', 'tinyurl', 'go0gle', 'gmai1.com'];\n/*В этой ноде n8n вам необходимо реализовать функционал на js, который будет проверять, содержит ли URL адрес в письме какие-либо подозрительные доменные имена. \nСписок подозрительных ссылок определен в suspiciousUrls, используйте именно его, чтобы получить такой же ответ как и мы :)\n\nПолучите входной URL из объекта JSON, который передается в функцию (в данном случае это будет $json.url).\nПроверьте содержится ли хотя бы один из подозрительных доменов suspiciousUrls в URL в письме.\nЕсли хотя бы один подозрительный url найден, тогда сохраните 1 в свойство flags_url объекта item и верните его через return, чтобы это значение можно было использовать дальше в пайплайне.\n*/"
+      },
+      "id": "657e7a3a-6b3c-4c5e-a3f2-fff84e8fec4b",
+      "name": "Check URL",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "5a93b357-5949-4435-a634-97de8bfabf53",
+      "name": "Merge Checks",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        100,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "\nconst total = (item.flags_words || 0) + (item.flags_url || 0);\nitem.flags = total;\nitem.phishing_detected = total >= 1;\nreturn item;\n"
+      },
+      "id": "b061582e-e202-4b1b-815b-e1d3e2996724",
+      "name": "Flag Counter",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        280,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "result",
+              "value": "={{ $json.phishing_detected ? '⚠️ Фишинг' : '✅ Безопасно' }}"
+            },
+            {
+              "name": "subject",
+              "value": "={{ $json.subject }}"
+            },
+            {
+              "name": "language",
+              "value": "={{ $json.language || 'unknown' }}"
+            },
+            {
+              "name": "flags",
+              "value": "={{ $json.flags.toString() }}"
+            },
+            {
+              "name": "url",
+              "value": "={{ $json.url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fd8a3f02-8b88-44a7-8ba9-49999501745e",
+      "name": "Set - Результат",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        460,
+        100
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "fa4c9362-2f9f-4c9f-9557-9e8e62650707",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        100
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "HTTP Request - Загрузить JSON": {
+      "main": [
+        [
+          {
+            "node": "Function - Разбить Письма",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function - Разбить Письма": {
+      "main": [
+        [
+          {
+            "node": "Check Words",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Check URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Words": {
+      "main": [
+        [
+          {
+            "node": "Merge Checks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check URL": {
+      "main": [
+        [
+          {
+            "node": "Merge Checks",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge Checks": {
+      "main": [
+        [
+          {
+            "node": "Flag Counter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Flag Counter": {
+      "main": [
+        [
+          {
+            "node": "Set - Результат",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request - Загрузить JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "96e21c02-a0d1-46eb-b2c3-d227b6ef0b23",
+  "meta": {
+    "instanceId": "15eb80b4baa698d7a7e6c98c3486e9efc4ff3b0962248c04edb10e7ccfeb8614"
+  },
+  "id": "iaYNHiZZRsGGt0wC",
+  "tags": []
+}
