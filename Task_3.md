@@ -57,7 +57,21 @@ return item;
 ```
 
 ### Check Url
-
+Удобочитаемый код:
+```js
+const suspiciousUrls = ['bit.ly', 'tinyurl', 'go0gle', 'gmai1.com'];
+// Получаем URL из объекта item
+const url = item.url;
+// Проверяем, содержит ли URL какой-либо подозрительный домен
+// Если да — устанавливаем флаг flags_url в 1, иначе в 0
+item.flags_url = suspiciousUrls.some(domain => url.includes(domain)) ? 1 : 0;
+// Возвращаем item
+return item;
+```
+Код для вставки в json:
+```js
+"functionCode": "const suspiciousUrls = ['bit.ly', 'tinyurl', 'go0gle', 'gmai1.com'];\nconst url = item.url;\n\nitem.flags_url = suspiciousUrls.some(domain => url.includes(domain)) ? 1 : 0;\nreturn item;"
+```
 
 При запуске обновлённого json-пайплайна происходит его успешное выполнение:
 ![Задача](/imgs/Pasted%20image%2020250720100053.png)
