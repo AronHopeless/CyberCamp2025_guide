@@ -38,7 +38,26 @@
   Проверьте содержится ли хотя бы один из подозрительных доменов suspiciousUrls в URL в письме.   
   Если хотя бы один подозрительный url найден, тогда сохраните 1 в свойство flags_url объекта item и верните его через return, чтобы это значение можно было использовать дальше в пайплайне.
 
-\\\\\\\
+Напишем функции согласно подсказкам
+### Check Words
+Удобочитаемый код:
+```
+const suspiciousWords = ['login', 'оплата', 'штраф', 'срочно', 'блокировка', 'avoid', 'penalty', 'verify', 'suspend'];
+// Получаем тело письма из текущего объекта item
+const body = item.body;
+// Проверяем, есть ли хотя бы одно слово из списка suspiciousWords в тексте письма
+// Если да — устанавливаем флаг flags_words в 1, иначе в 0
+item.flags_words = suspiciousWords.some(word => body.includes(word)) ? 1 : 0;
+// Возвращаем изменённый объект item
+return item;
+```
+Код для вставки в json:
+```
+"functionCode": "const suspiciousWords = ['login', 'оплата', 'штраф', 'срочно', 'блокировка', 'avoid', 'penalty', 'verify', 'suspend'];\nconst body = item.body;\nitem.flags_words = suspiciousWords.some(word => body.includes(word)) ? 1 : 0;\nreturn item;"
+```
+
+### Check Url
+
 
 При запуске обновлённого json-пайплайна происходит его успешное выполнение:
 ![Задача](/imgs/Pasted%20image%2020250720100053.png)
