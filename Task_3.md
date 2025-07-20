@@ -3,7 +3,7 @@
 ## Задание
 ![Инцидент](/imgs/Pasted%20image%2020250720084322.png)
 ![Задача](/imgs/Pasted%20image%2020250720084345.png)
-[https://n8n.io/](https://n8n.io/)
+Ссылка для перехода -> [https://n8n.io/](https://n8n.io/)
 
 ## Флаги для поиска
 ![Задача](/imgs/Pasted%20image%2020250720084439.png)
