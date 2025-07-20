@@ -41,7 +41,7 @@
 Напишем функции согласно подсказкам
 ### Check Words
 Удобочитаемый код:
-```
+```js
 const suspiciousWords = ['login', 'оплата', 'штраф', 'срочно', 'блокировка', 'avoid', 'penalty', 'verify', 'suspend'];
 // Получаем тело письма из текущего объекта item
 const body = item.body;
