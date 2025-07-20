@@ -9,12 +9,15 @@
 
 > [!WARNING]
 >
+>  
 > 
 > *NO SPOILER ZONE*
 >
 > 
+> 
 > Scroll to see solution
 >
+> 
 >
 
 ### Решение
