@@ -73,6 +73,9 @@ return item;
 "functionCode": "const suspiciousUrls = ['bit.ly', 'tinyurl', 'go0gle', 'gmai1.com'];\nconst url = item.url;\n\nitem.flags_url = suspiciousUrls.some(domain => url.includes(domain)) ? 1 : 0;\nreturn item;"
 ```
 
+Вставим эти функции в обновлённый [json-файл](/task3_materials/PhishCamp3.json) и загрузим его в новый WorkFlow в панели n8n.  
+Запустим WorkFlow
+
 При запуске обновлённого json-пайплайна происходит его успешное выполнение:
 ![Задача](/imgs/Pasted%20image%2020250720100053.png)
 
