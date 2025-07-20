@@ -38,7 +38,7 @@ https://web.archive.org/web/20250626132226/https://willy-the-cat.github.io/nft_c
 
 В информации мы видим подгружаемые png-картинки, css-стиль и JS-скрипт с названием "payment". (На аналитику гугл не обращаем внимания)  
 Рассмотрим платёжный скрипт подробнее.
-```
+```js
 var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
 if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
 {
@@ -287,7 +287,7 @@ bmZ0X2tpdHR5X3VubG9jaw==
 В разделе `body` обнаружаем весьма интересный скрипт:
 
 ![Архив_поиск](/imgs/Pasted%20image%2020250719152310.png)
-```
+```js
 <script>
   window.getFinalReward = function(key) {
     fetch("flag.php?key=" + encodeURIComponent(key))
