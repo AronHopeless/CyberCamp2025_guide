@@ -56,6 +56,7 @@ ___
 > [!NOTE]
 > Дальнейшее решение представлено на основе совокупных мнений участников CTF
 ___
+*\*пропущенная логическая связь*\*
 
 Имея в распоряжении три *магических* слова, можно обратиться к ресурсу [what3words](https://what3words.com) для поиска географического расположения
 Впишем их в поисковую строку, система предложит вариант с исправленным синтаксисом: `///кора.пони.поиск` 
@@ -66,9 +67,68 @@ ___
 
 <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721174859.png" width="750">
 
-Это искомый адрес и вот он в формате флага:
+Это искомый адрес и вот он в формате третьего флага:
 ```
 Москва, 1-й Боткинский проезд, дом 7с1
+```
+
+___
+Для поиска даты проведения и участников мероприятия следует глубже исследовать страницу Money Machine.  
+Конкретно следует обратить внимание на изображения на странице пользователя
+
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721180059.png">
+
+В комментариях ко второй картинке можно найти некий хэштег:
+
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721180157.png">
+
+```
+#furofsecret
+```
+*\*пропущенная логическая связь*\*  
+
+Подставив данный хэштег в поиск по Telegram, найдём группу https://t.me/furofsecret  
+Группа явно соответствует направлению поиска:  
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721180604.png">
+
+(*возможно, поиск по хэштегу мог бы привести к этой группе*)
+
+Последнее сообщение является намёком - это перевёрнутая (*с ошибками, лол*) фраза "продолжай искать"  
+
+*\*пропущенная логическая связь*\*  
+
+Изменив порядок символов в ссылке группы Telegram, получим `tercesforuf` - такая группа также существует:  
+https://t.me/tercesforuf
+
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721181637.png">
+
+Группа посвящена исследуемому мероприятию и имеет трёх участников.   
+Можем получить их ники:  
+@jzvyzbhdl  
+@useruseee  
+@furneck  
+
+И в формате второго флага:
+```
+@useruseee, @jzvyzbhdl, @furneck
+```
+
+В группе велось обсуждение мероприятия. Помимо прочего, там есть и что-то про время:  
+
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721181756.png">
+
+[Картинка](/task4_materials/время.png). А картинка это стеганография.  
+Воспользуемся первым в выдаче [инструментом онлайн стеганографии](https://stylesuxx.github.io/steganography/):
+
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721182225.png">
+
+Переходим на вкладку `Decode image`, загружаем картинку - получаем ответ:
+
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721182551.png">
+
+В формате флага:
+```
+07.12.2024 17:00
 ```
 
 
