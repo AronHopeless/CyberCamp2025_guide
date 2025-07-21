@@ -63,7 +63,7 @@ ___
   <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250720113508.png" width="350">
 </p>
 
-Перейдя на эту вкладку пользователя Money Machine, видим запланированное мероприятие `secret place` и дату проведения - 31 декабря в 0:00  
+Перейдя на эту вкладку пользователя Money Machine, видим запланированное [мероприятие](https://m.vk.com/event228568302) `secret place` и дату проведения - 31 декабря в 0:00  
 
 
 В формате флага дата выглядит следующим образом:
