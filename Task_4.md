@@ -111,7 +111,7 @@ ___
 ```
 @useruseee, @jzvyzbhdl, @furneck
 ```
-
+___
 В группе велось обсуждение мероприятия. Помимо прочего, там есть и что-то про время:  
 
 <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721181756.png">
