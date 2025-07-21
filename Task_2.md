@@ -17,7 +17,9 @@
 ```
 https://willy-the-cat.github.io/nft_cats/
 ```
-![Флаги](/imgs/Pasted%20image%2020250719092406.png)
+<p align="center">
+  <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250719092406_2.png">
+</p>
 
 Видим, что страницы уже не существует -> необходимо просмотреть, что было на ней раньше  
 Для этого перейдём на https://archive.org  
@@ -27,7 +29,7 @@ https://willy-the-cat.github.io/nft_cats/
 
 Существует одна версия сайта от 26го июня:
 
-![Архив_поиск](/imgs/Pasted%20image%2020250719092642.png)
+![Архив_поиск](/imgs/Pasted%20image%2020250719092642_2.png)
 
 Перейдём на неё. Имеем страницу "магазина"
 ```
@@ -248,14 +250,14 @@ http://shop.nft-kitty.online/
 Поэтому был использован инструмент на втором месте поискового результата - https://folge.me/tools/favicon-downloader
 
 После вставки URL сайта, инструмент успешно нашёл фавикон и предлагает скачать:
-
-![Архив_поиск](/imgs/Pasted%20image%2020250719135944.png)
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250719135944.png" width = "750">
 
 Переход по ссылке `Download` приводит нас на следующую страницу:
 ```
 https://raw.githubusercontent.com/junior03986721/compot-nft/main/bmZ0X2tpdHR5X3VubG9jaw==.png
 ```
-![Архив_поиск](/imgs/Pasted%20image%2020250719140030.png)
+
+<img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250719140030_2.png" width = "750">
 
 Это одно из изображений, загружаемых с Github-репозитория на сайт, как ранее было обнаружено.  
 Можем скачать его прямо из браузера.
