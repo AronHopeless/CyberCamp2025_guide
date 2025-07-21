@@ -58,11 +58,13 @@ ___
 ___
 
 При поиске с мобильной версии Вконтакте, в разделе просмотра сообществ пользователя присутствует вкладка `Мероприятия`  
-![Задача](/imgs/Pasted%20image%2020250720113408.png)
+<p>
+  <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250720113408.png" width="400">
+  <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250720113508.png" width="350">
+</p>
 
 Перейдя на эту вкладку пользователя Money Machine, видим запланированное мероприятие `secret place` и дату проведения - 31 декабря в 0:00  
 
-![Задача](/imgs/Pasted%20image%2020250720113508.png)
 
 В формате флага дата выглядит следующим образом:
 ```data
