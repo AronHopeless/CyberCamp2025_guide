@@ -96,8 +96,8 @@ ___
 
 *\*пропущенная логическая связь*\*  
 
-Изменив порядок символов в ссылке группы Telegram, получим `tercesforuf` - такая группа также существует:  
-https://t.me/tercesforuf
+По аналогии с последним сообщением, изменим порядок символов в ссылке группы Telegram.  
+Получим `tercesforuf` - такая группа также существует: https://t.me/tercesforuf
 
 <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721181637.png">
 
