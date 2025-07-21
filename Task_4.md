@@ -126,7 +126,7 @@ https://t.me/tercesforuf
 
 <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/Pasted%20image%2020250721182551.png">
 
-В формате флага:
+В формате первого флага:
 ```
 07.12.2024 17:00
 ```
