@@ -23,18 +23,18 @@ The CyberCamp 2025 tasks writeups
   </tr>
   <tr>
     <td>Task 4 - NGFW-хард</td>
-    <td></td>
+    <td><a href="">Link</a></td>
   </tr>
   <tr>
     <td>Task 5 - Ящик Пандоры</td>
-    <td>[Link]()</td>
+    <td><a href="">Link</a></td>
   </tr>
   <tr>
     <td>Task 6 - Инженер SOC — это звучит гордо</td>
-    <td>[Link]()</td>
+    <td><a href="">Link</a></td>
   </tr>
   <tr>
     <td>Task 7 - Едем без колес</td>
-    <td>[Link]()</td>
+    <td><a href="">Link</a></td>
   </tr>
 </table>
