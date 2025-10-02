@@ -31,7 +31,7 @@ The CyberCamp 2025 tasks writeups
   </tr>
   <tr>
     <td>Task 6 - Инженер SOC — это звучит гордо</td>
-    <td><a href="">Link</a></td>
+    <td><a href="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/Task_7.md">Link</a></td>
   </tr>
   <tr>
     <td>Task 7 - Едем без колес</td>
