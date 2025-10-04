@@ -92,7 +92,6 @@ DevSecOps можно разделить на 2 части:
 ### Дополнительные материалы
 [![Материалы PDF](https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/5-3.jpg)](https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/materials/Дополнительные_материалы_А_Конопак.pdf)
 
-[![Материалы PDF](https://raw.githubusercontent.com/AronHopeless/CyberCamp2025_guide/main/imgs/5-3.jpg)](https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/materials/Дополнительные_материалы_А_Конопак.pdf)
 
 ___
 
