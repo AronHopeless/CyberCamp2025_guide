@@ -89,6 +89,10 @@ DevSecOps можно разделить на 2 части:
 2. Формирование последовательность действий (дорожная карта), сроков, ответственных
 3. Внедрение инструментов анализа в процессе разработки (SAST и композиционный анализ)
 
+### Дополнительные материалы
+[![Материалы PDF](https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/5-3.jpg)](https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/materials/Дополнительные_материалы_А_Конопак.pdf)
+
+
 ___
 
 ## От DevOps до DevSecOps
