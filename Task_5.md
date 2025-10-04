@@ -92,8 +92,3 @@ ___
 
 Ответ: `111`
 
-
-
-- [ ] DETECT
-- [x] PROTECT
-- [ ] RESPOND
