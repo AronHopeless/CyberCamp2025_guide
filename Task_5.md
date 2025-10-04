@@ -67,7 +67,7 @@ DevSecOps можно разделить на 2 части:
 Примеры: StarVault, Deckhouse, HashiCorp Vault, OpenBao.  
 
 <p align="left">
-  <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/5-1.jpg" width="750">
+  <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/5-1.jpg">
 </p>
 
 ### С чего начинать выстраивать DevSecOps
@@ -78,7 +78,7 @@ DevSecOps можно разделить на 2 части:
 - Приложение
 
 <p align="left">
-  <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/5-2.jpg" width="750">
+  <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/5-2.jpg">
 </p>
 
 [Ресурс DAF](https://github.com/Jet-Security-Team/DevSecOps-Assessment-Framework)
