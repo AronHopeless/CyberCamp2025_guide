@@ -80,7 +80,9 @@ DevSecOps можно разделить на 2 части:
 <p align="left">
   <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/5-2.jpg" width="750">
 </p>
-[Ресурс](https://github.com/Jet-Security-Team/DevSecOps-Assessment-Framework)
+
+[Ресурс DAF](https://github.com/Jet-Security-Team/DevSecOps-Assessment-Framework)
+
 
 "Начинать всегда стоит с аудита"  
 1. Проведение аудита существующих процессов и инфраструктуры разработки (в форме экспертного аудита по фреймворку DAF от Jet)
