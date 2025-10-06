@@ -27,7 +27,7 @@ The CyberCamp 2025 tasks writeups
   </tr>
   <tr>
     <td>Task 5 - От DevOps до DevSecOps</td>
-    <td><a href="">Link</a></td>
+    <td><a href="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/Task_5.md#%D0%BE%D1%82-devops-%D0%B4%D0%BE-devsecops">Link</a></td>
   </tr>
   <tr>
     <td>Task 6 - NGFW-хард</td>
