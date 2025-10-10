@@ -526,11 +526,35 @@ ___
 >
 > Команды для запуска:
 > - Сгенерируй приватный и публичный ключи.
-> - Используй приватный ключ для подписания файла ML-модели: `cosign sign-blob --key cosign_key_path.key --output-signature model_sig.sig model_path --tlog-upload=false`
-> - Проверь подпись: `cosign verify-blob --key cosign_pub_path.pub --signature model_sig.sig model_path --insecure-ignore-tlog=true`
+> - Используй приватный ключ для подписания файла ML-модели: `cosign sign-blob --key <cosign_key_path>.key --output-signature model_sig.sig <model_path> --tlog-upload=false`
+> - Проверь подпись: `cosign verify-blob --key <cosign_pub_path>.pub --signature model_sig.sig <model_path> --insecure-ignore-tlog=true`
 
 > Маска ответа:
 > \*\*\*\*\*\*\*\* \*\*
 
+Для выполнения данного задания следует ознакомиться с параметрами запуска инструмента:
 
-Ответ: `base.TriggerListDetector`
+    cosign --help
+
+Далее последовательно выполнить команды:
+1. Генерация пары ключей
+```
+cosign generate-key-pair
+```
+2. Проверить успешность генерации ключей можно, просмотрев текущую директорию с помощью `ls`
+3. Подписать модель
+```
+cosign sign-blob --key cosign.key --output-signature model_sig.sig gemma/gemma-3n-E2B-it-Q2_K_L.gguf --tlog-upload=false
+```
+4. Проверить подпись модели
+```
+cosign verify-blob --key cosign.pub --signature model_sig.sig gemma/gemma-3n-E2B-it-Q2_K_L.gguf --insecure-ignore-tlog=true
+```
+
+<p align="left">
+  <img src="https://github.com/AronHopeless/CyberCamp2025_guide/blob/main/imgs/7-11.jpg">
+</p>
+
+Успешная проверка подписи приводит к появлению соответствующего сообщения - Verified OK
+
+Ответ: `Verified OK`
